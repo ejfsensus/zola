@@ -1,0 +1,17 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+numReplicas = 1
+sleepApplication = false
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+[environments.production]
+# Railway will automatically set these from your dashboard variables
+# This section is for documentation purposes
+# NODE_ENV = "production"
+# NEXT_TELEMETRY_DISABLED = "1"
+# PORT = "3000"
+# HOSTNAME = "0.0.0.0"
